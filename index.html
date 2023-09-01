@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Option Price and Greeks Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="calculator">
+        <h1>Option Price and Greeks Calculator</h1>
+        <label for="call-put">Select Option Type:</label>
+        <select id="call-put">
+            <option value="call">Call Option</option>
+            <option value="put">Put Option</option>
+        </select>
+        <div class="input-group">
+            <label for="stock-price">Stock Price:</label>
+            <input type="number" id="stock-price" placeholder="Stock Price">
+        </div>
+        <div class="input-group">
+            <label for="strike-price">Strike Price:</label>
+            <input type="number" id="strike-price" placeholder="Strike Price">
+        </div>
+        <div class="input-group">
+            <label for="time-to-expiration">Time to Expiration (in years):</label>
+            <input type="number" id="time-to-expiration" placeholder="Time to Expiration">
+        </div>
+        <div class="input-group">
+            <label for="volatility">Volatility (annual):</label>
+            <input type="number" id="volatility" placeholder="Volatility">
+        </div>
+        <div class="input-group">
+            <label for="interest-rate">Risk-free Interest Rate (annual):</label>
+            <input type="number" id="interest-rate" placeholder="Interest Rate">
+        </div>
+        <button id="calculate">Calculate</button>
+        <div class="results">
+            <p>Option Price: <span id="option-price">N/A</span></p>
+            <p>Delta: <span id="delta">N/A</span></p>
+            <p>Gamma: <span id="gamma">N/A</span></p>
+            <p>Theta: <span id="theta">N/A</span></p>
+            <p>Vega: <span id="vega">N/A</span></p>
+            <p>Rho: <span id="rho">N/A</span></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
